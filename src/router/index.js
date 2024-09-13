@@ -26,6 +26,35 @@ const routes = [
     name: "user-form-edit",
     component: () => import("../components/user/UserForm.vue"),
   },
+  // Projects
+  {
+    path: "/projects",
+    name: "Projects",
+    component: () => import("../views/ProjectsView.vue"),
+  },
+  {
+    path: "/projects/create",
+    name: "NewProject",
+    component: () => import("../components/project/ProjectForm.vue"),
+  },
+  {
+    path: "/projects/edit/:id",
+    name: "EditProject",
+    component: () => import("../components/project/ProjectForm.vue"),
+    props: true,
+  },
+  {
+    path: "/projects/:id",
+    name: "ProjectDetail",
+    component: () => import("../components/project/ProjectDetail.vue"),
+    props: true,
+  },
+  // Plan
+  {
+    path: "/plans",
+    name: "Plans",
+    component: () => import("../views/PlanGeneration.vue"),
+  },
 ];
 
 const router = createRouter({
